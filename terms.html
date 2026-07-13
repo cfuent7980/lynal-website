@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Lynal</title>
+  <meta name="description" content="The terms that govern your use of Lynal." />
+  <meta name="robots" content="noindex, follow" />
+
+  <!-- ============ ICONS ============ -->
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <meta name="theme-color" content="#0e0d14" />
+
+  <!-- ============ FONTS ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- ============ TAILWIND ============ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            bg:    '#0e0d14', card: '#15141e', card2: '#1a1924', line: '#1e1c2a', ink: '#0a0910',
+            t1:    '#e8e8f0', t2: '#6a7a8a', t2r: '#8c97a6', t3: '#3a3a52', tb: '#aeb4c6',
+            brand: { DEFAULT:'#3a7ab8', bright:'#5aa6e6', deep:'#2a5d92' },
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(58,122,184,.22), 0 6px 20px -6px rgba(58,122,184,.45)',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    :root{ color-scheme: dark; --ease: cubic-bezier(.16,1,.3,1); }
+    html, body{ background:#0e0d14; overflow-x:clip; }
+    body{
+      background-image: radial-gradient(120% 90% at 50% -10%, #15131f 0%, #0e0d14 42%, #090810 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+    .grain::before{
+      content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.028; mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size:200px 200px;
+    }
+    @media (min-resolution:2dppx){ .grain::before{ opacity:.02; } }
+    .eyebrow{ font-family:'Outfit',sans-serif; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:#6a7a8a; }
+    .glassborder{ position:relative; }
+    .glassborder::before{
+      content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; pointer-events:none;
+      background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.015) 45%, rgba(58,122,184,.16));
+      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude;
+    }
+    .rule{ height:1px; background:linear-gradient(90deg,transparent,rgba(58,122,184,.25),transparent); }
+    .nav-link{ position:relative; }
+    .nav-link::after{ content:""; position:absolute; left:0; bottom:-4px; height:1px; width:100%; background:linear-gradient(90deg,#2f6396,#5aa6e6); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease); }
+    .nav-link:hover::after{ transform:scaleX(1); }
+    .btn-primary{ transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease; }
+    .btn-primary:hover{ transform:translateY(-1px) scale(1.02); box-shadow:0 8px 24px -8px rgba(58,122,184,.6); }
+    .btn-primary:active{ transform:translateY(0) scale(.985); transition-duration:.08s; }
+    :focus-visible{ outline:none; box-shadow:0 0 0 2px #0e0d14, 0 0 0 4px rgba(90,166,230,.7); border-radius:inherit; }
+
+    /* legal prose */
+    .legal h2{ margin-top:2.75rem; font-family:'Outfit',sans-serif; font-weight:600; font-size:1.25rem; color:#e8e8f0; letter-spacing:-.01em; }
+    .legal p{ margin-top:.9rem; line-height:1.75; color:#aeb4c6; }
+    .legal ul{ margin-top:.9rem; padding-left:1.2rem; list-style:disc; color:#aeb4c6; line-height:1.75; }
+    .legal li{ margin-top:.4rem; }
+    .legal li::marker{ color:#3a7ab8; }
+    .legal strong{ color:#e8e8f0; font-weight:600; }
+    .legal a{ color:#5aa6e6; text-decoration:underline; text-underline-offset:2px; text-decoration-color:rgba(58,122,184,.45); }
+    .legal a:hover{ color:#fff; }
+    .legal .callout{ margin-top:1.5rem; border-radius:14px; border:1px solid #1e1c2a; background:#15141e; padding:1.1rem 1.25rem; }
+    .legal .callout p{ margin-top:0; }
+
+    @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+  </style>
+</head>
+
+<body class="grain font-sans text-t1 antialiased selection:bg-brand/40 selection:text-white">
+
+  <!-- ================= AMBIENT BACKGROUND ================= -->
+  <div class="pointer-events-none fixed inset-0 z-0">
+    <div class="absolute -top-32 left-1/2 h-[28rem] w-[52rem] -translate-x-1/2" style="background:radial-gradient(ellipse at center, rgba(58,122,184,.18), transparent 70%); filter:blur(95px); mix-blend-mode:screen;"></div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 36%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 36%,transparent 100%);"></div>
+    <div class="absolute inset-0" style="background:radial-gradient(130% 130% at 50% 32%, transparent 55%, rgba(8,7,14,.65) 100%); mix-blend-mode:multiply;"></div>
+    <div class="absolute inset-x-0 bottom-0 h-64" style="background:linear-gradient(0deg,#090810,transparent);"></div>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <nav class="glassborder mx-auto flex max-w-6xl items-center justify-between rounded-2xl bg-bg/70 px-4 py-3 backdrop-blur-xl sm:px-6">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Lynal home">
+        <img src="icon.png" alt="" class="h-9 w-9 drop-shadow-[0_2px_10px_rgba(90,90,200,.35)]" />
+        <span class="text-lg font-semibold tracking-tight font-display">Lynal</span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm text-t2r md:flex">
+        <a href="index.html#how" class="nav-link transition-colors hover:text-t1">How it works</a>
+        <a href="index.html#features" class="nav-link transition-colors hover:text-t1">Features</a>
+        <a href="index.html#lyli" class="nav-link transition-colors hover:text-t1">Meet Lyli</a>
+        <a href="index.html#reviews" class="nav-link transition-colors hover:text-t1">Reviews</a>
+      </div>
+      <a href="index.html#download" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">
+        Get the app
+      </a>
+    </nav>
+  </header>
+
+  <main class="relative z-10 mx-auto max-w-3xl px-4 pt-32 pb-24 sm:pt-40 sm:pb-32">
+    <a href="index.html" class="inline-flex items-center gap-1.5 text-sm text-t2r transition-colors hover:text-t1">← Back to Lynal</a>
+
+    <p class="eyebrow mt-8">Legal</p>
+    <h1 class="mt-3 font-display font-semibold" style="font-size:clamp(2rem,4vw,2.75rem); letter-spacing:-.02em;">Terms of Service</h1>
+    <p class="mt-3 text-sm text-t2r">Last updated: July 7, 2026</p>
+
+    <div class="legal mt-2">
+      <p class="!mt-8 text-lg !leading-relaxed !text-tb">By downloading, accessing, or using the Lynal mobile application or this website (together, the "Service"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree, please do not use the Service.</p>
+
+      <h2>1. Eligibility</h2>
+      <p>You must be at least 13 years old (or the minimum age of digital consent in your jurisdiction) to use the Service. By using the Service, you represent that you meet this requirement and, if you are a minor where required, that you have a parent or guardian's permission.</p>
+
+      <h2>2. Your account</h2>
+      <p>You are responsible for maintaining the confidentiality of your account credentials and for all activity under your account. Notify us immediately at <a href="mailto:support@lynal.app">support@lynal.app</a> if you suspect unauthorized use of your account.</p>
+
+      <h2>3. Description of the Service</h2>
+      <p>Lynal helps you track daily habits, workouts, finances, mood, and goals across six pillars — Discipline, Physical, Mental, Financial, Goals, and Social — and calculates a Life Score based on the information you provide. Lyli, our AI analyst, generates automated, personalized suggestions based on your logged data.</p>
+
+      <div class="callout">
+        <h2 style="margin-top:0;">4. Not medical, financial, or professional advice</h2>
+        <p>Lynal, including Lyli, is provided for general informational and motivational purposes only. It is <strong>not</strong> a substitute for professional medical, mental health, financial, legal, or other professional advice. Lyli's responses are generated by artificial intelligence and may be inaccurate, incomplete, or unsuitable for your situation.</p>
+        <p>Always consult a qualified professional before making decisions about your health, finances, or well-being. If you are experiencing a medical or mental health emergency, contact a licensed professional or emergency services immediately.</p>
+      </div>
+
+      <h2>5. Subscriptions and purchases</h2>
+      <p>Certain features may require a paid subscription, billed through the Apple App Store or Google Play. Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You can manage or cancel your subscription through your App Store or Google Play account settings. Fees are non-refundable except as required by law or platform policy.</p>
+
+      <h2>6. Acceptable use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Service for any unlawful purpose</li>
+        <li>Attempt to reverse-engineer, decompile, or gain unauthorized access to the Service</li>
+        <li>Interfere with or disrupt the Service or its infrastructure</li>
+        <li>Misuse social or competitive features to harass others</li>
+        <li>Upload content that is unlawful, abusive, or infringes on others' rights</li>
+      </ul>
+
+      <h2>7. Your content</h2>
+      <p>You retain ownership of the information you log in the app ("User Content"). By using the Service, you grant Lynal a limited license to use, store, and process your User Content solely to provide and improve the Service, as described in our <a href="privacy.html">Privacy Policy</a>.</p>
+
+      <h2>8. Intellectual property</h2>
+      <p>The Service, including its design, features, graphics, and the Lynal and Lyli names and logos, is owned by Lynal and protected by intellectual property laws. You may not copy, modify, or distribute any part of the Service without our written permission.</p>
+
+      <h2>9. Termination</h2>
+      <p>We may suspend or terminate your access to the Service at any time, with or without notice, for conduct that violates these Terms or is otherwise harmful to us, other users, or third parties. You may stop using the Service and delete your account at any time.</p>
+
+      <h2>10. Disclaimers</h2>
+      <p>The Service is provided "as is" and "as available," without warranties of any kind, whether express or implied, including warranties of merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the Service, including Lyli's outputs, will be accurate, reliable, or error-free.</p>
+
+      <h2>11. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, Lynal and its affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, data, or goodwill, arising from your use of the Service.</p>
+
+      <h2>12. Governing law</h2>
+      <p>These Terms are governed by the laws of [your state/country — to be finalized], without regard to conflict-of-law principles.</p>
+
+      <h2>13. Changes to these Terms</h2>
+      <p>We may update these Terms from time to time. Continued use of the Service after changes take effect constitutes acceptance of the revised Terms.</p>
+
+      <h2>14. Contact us</h2>
+      <p>Questions about these Terms? Contact us at <a href="mailto:support@lynal.app">support@lynal.app</a>.</p>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="relative z-10 px-4 py-12">
+    <div class="mx-auto max-w-6xl">
+      <div class="rule mb-12"></div>
+      <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <div class="flex items-center gap-2.5">
+          <img src="icon.png" alt="" class="h-8 w-8" />
+          <span class="font-display font-semibold text-t1">Lynal</span>
+          <span class="text-sm text-t2r">· Life Analytics</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm text-t2r">
+          <a href="privacy.html" class="nav-link transition-colors hover:text-t1">Privacy</a>
+          <a href="terms.html" class="nav-link text-t1 transition-colors hover:text-t1">Terms</a>
+          <a href="mailto:support@lynal.app" class="nav-link transition-colors hover:text-t1">Support</a>
+        </div>
+        <p class="text-sm text-t2r">© 2026 Lynal</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
