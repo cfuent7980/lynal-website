@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — Lynal</title>
-  <meta name="description" content="How Lynal collects, uses, and protects your information." />
+  <meta name="description" content="Lynal Privacy Policy — what data the app handles, where it goes, and the controls you have." />
   <meta name="robots" content="noindex, follow" />
 
   <!-- ============ ICONS ============ -->
@@ -72,6 +72,7 @@
 
     /* legal prose */
     .legal h2{ margin-top:2.75rem; font-family:'Outfit',sans-serif; font-weight:600; font-size:1.25rem; color:#e8e8f0; letter-spacing:-.01em; }
+    .legal h3{ margin-top:1.5rem; font-family:'Outfit',sans-serif; font-weight:600; font-size:1.02rem; color:#e8e8f0; }
     .legal p{ margin-top:.9rem; line-height:1.75; color:#aeb4c6; }
     .legal ul{ margin-top:.9rem; padding-left:1.2rem; list-style:disc; color:#aeb4c6; line-height:1.75; }
     .legal li{ margin-top:.4rem; }
@@ -79,6 +80,11 @@
     .legal strong{ color:#e8e8f0; font-weight:600; }
     .legal a{ color:#5aa6e6; text-decoration:underline; text-underline-offset:2px; text-decoration-color:rgba(58,122,184,.45); }
     .legal a:hover{ color:#fff; }
+    .legal table{ width:100%; margin-top:1.25rem; border-collapse:collapse; font-size:.95rem; border:1px solid #1e1c2a; border-radius:.75rem; overflow:hidden; }
+    .legal th, .legal td{ border-bottom:1px solid #1e1c2a; padding:.7rem .85rem; text-align:left; vertical-align:top; color:#aeb4c6; line-height:1.6; }
+    .legal thead th{ background:#15141e; color:#e8e8f0; font-family:'Outfit',sans-serif; font-weight:600; font-size:.82rem; text-transform:uppercase; letter-spacing:.06em; }
+    .legal tbody tr:last-child td{ border-bottom:none; }
+    .legal blockquote{ margin-top:1.25rem; border-left:2px solid #3a7ab8; background:rgba(58,122,184,.06); padding:.9rem 1.1rem; border-radius:0 .6rem .6rem 0; color:#aeb4c6; line-height:1.7; }
 
     @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
   </style>
@@ -105,7 +111,6 @@
         <a href="index.html#how" class="nav-link transition-colors hover:text-t1">How it works</a>
         <a href="index.html#features" class="nav-link transition-colors hover:text-t1">Features</a>
         <a href="index.html#lyli" class="nav-link transition-colors hover:text-t1">Meet Lyli</a>
-        <a href="index.html#reviews" class="nav-link transition-colors hover:text-t1">Reviews</a>
       </div>
       <a href="index.html#download" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">
         Get the app
@@ -118,60 +123,93 @@
 
     <p class="eyebrow mt-8">Legal</p>
     <h1 class="mt-3 font-display font-semibold" style="font-size:clamp(2rem,4vw,2.75rem); letter-spacing:-.02em;">Privacy Policy</h1>
-    <p class="mt-3 text-sm text-t2r">Last updated: July 7, 2026</p>
+    <div class="mt-4 space-y-0.5 text-sm text-t2r">
+      <p><strong class="font-semibold text-t1">Effective date:</strong> July 17, 2026</p>
+      <p><strong class="font-semibold text-t1">Publisher:</strong> Nile Productivity LLC (Texas, USA)</p>
+      <p><strong class="font-semibold text-t1">Contact:</strong> <a href="mailto:support@lynal.app" class="text-brand-bright underline underline-offset-2 hover:text-white">support@lynal.app</a></p>
+    </div>
 
     <div class="legal mt-2">
-      <p class="!mt-8 text-lg !leading-relaxed !text-tb">This Privacy Policy describes how Lynal ("Lynal," "we," "us," or "our") collects, uses, and shares information when you use our mobile application and this website (together, the "Service"). By using the Service, you agree to the collection and use of information as described in this policy.</p>
+      <p class="!mt-8 text-lg !leading-relaxed !text-tb">Lynal ("the app", "we", "us") is a personal life-tracking app: you log habits, moods, workouts, journals, goals, social activity and (optionally) income, and the app turns them into scores, trends and AI-generated insights. This policy explains exactly what data the app handles, where it goes, and the controls you have.</p>
+      <p>Lynal is operated by <strong>Nile Productivity LLC</strong>, a Texas limited liability company.</p>
 
-      <h2>1. Information we collect</h2>
-      <p><strong>Account information.</strong> Your name, email address, password (stored in hashed form), optional profile photo, and anything else you provide when you create an account.</p>
-      <p><strong>Check-in and activity data.</strong> The information you log in the app to calculate your Life Score — including mood ratings, habit completions, workout details, spending or financial entries, goals, journal notes, and daily check-ins.</p>
-      <p><strong>Conversations with Lyli.</strong> Messages you send to Lyli, our AI analyst, and the responses Lyli generates based on your logged data.</p>
-      <p><strong>Device and usage data.</strong> Information about how you use the Service, such as app interactions, log data, device type, operating system, IP address, and crash reports.</p>
-      <p><strong>Purchase information.</strong> If you subscribe to a paid plan, payment is processed by the Apple App Store or Google Play. We do not receive or store your full payment card details.</p>
+      <h2>1. Data we collect</h2>
+      <p><strong>Account &amp; profile.</strong> Email address, display name, optional username, date of birth, gender/identity selection, optional bio and profile photo, region (for regional leaderboards), and your subscription tier.</p>
 
-      <h2>2. How we use information</h2>
+      <p><strong>Well-being &amp; activity data (the content of the app).</strong></p>
       <ul>
-        <li>To provide and operate the Service, including calculating your Life Score and pillar scores</li>
-        <li>To power Lyli's personalized insights, coaching messages, and recommendations</li>
-        <li>To send you notifications, reminders, and service-related communications</li>
-        <li>To maintain, secure, and improve the Service and develop new features</li>
-        <li>To detect, investigate, and prevent fraud, abuse, or security incidents</li>
-        <li>To comply with legal obligations</li>
+        <li>Daily check-ins: mood and energy ratings.</li>
+        <li>Habits and habit completions.</li>
+        <li>Journals and dream entries — free-form text you write.</li>
+        <li>Workouts: exercises, sets, weights, duration, intensity, body stats (e.g. body weight and body-fat figures) you log.</li>
+        <li>Goals and goal progress.</li>
+        <li>Social interaction logs (who/what you note, quality ratings).</li>
+        <li>Income figures and income goals <strong>you choose to enter</strong> (never pulled from any financial institution).</li>
+        <li>Derived scores (your Life Score and pillar scores), streaks, league placement, badges and weekly recaps computed from the above.</li>
+      </ul>
+      <p>We do <strong>not</strong> connect to Apple Health or Google Fit. Any workout or body data in Lynal is only what you enter in the app yourself.</p>
+
+      <p><strong>Friends (optional).</strong> If you add friends inside the app, we store the friend requests and friendships you create. This uses only accounts already on Lynal — Lynal does <strong>not</strong> read, upload, or scan your device's address book.</p>
+
+      <p><strong>Photos.</strong> If you set a profile photo or add an image to a journal entry, the image you pick or take is uploaded to your storage area on our servers. We request camera/photo access only when you initiate this.</p>
+
+      <p><strong>Push tokens &amp; device data.</strong> If you enable notifications, we store your Expo push token to deliver them. We do not collect advertising identifiers or precise location, and we do not use third-party advertising SDKs.</p>
+
+      <p><strong>Product analytics &amp; diagnostics.</strong> We use <strong>PostHog</strong>, a first-party product analytics tool, to understand how the app is used and to find crashes. It records:</p>
+      <ul>
+        <li>Screens you visit and the order you visit them in.</li>
+        <li>Taps on interface elements (we capture only an element's internal test identifier — never the text you typed or the content you were looking at).</li>
+        <li>App lifecycle events (app opened, backgrounded, installed, updated).</li>
+        <li>A small number of named product events — for example completing onboarding, signing out, or starting/failing a purchase.</li>
+        <li>Crash and error reports.</li>
+      </ul>
+      <p>These events are linked to your account's user ID so we can tell one person's session from another's. <strong>We never send the content you create</strong> — journal and dream text, chat messages, mood notes and photos are excluded by design. We do not use this data for advertising, and we do not share it with data brokers or combine it with data from other companies' apps or websites. Signing out detaches your identity from future events; deleting your account removes your data as described in section 5.</p>
+
+      <h2>2. How AI is involved (Anthropic)</h2>
+      <p>Lynal's assistant ("Lyli") analyzes your entries (journals, dreams, check-ins, habits, workouts, goals, income trends) to produce insights, chat responses, weekly recaps and suggested workouts. To do this, relevant excerpts of your data are sent to <strong>Anthropic</strong> (Claude models) via API from our servers. Anthropic's commercial API terms provide that API data is <strong>not used to train their models</strong>. You can disable all background AI analysis at any time in <strong>Settings → Lyli → AI analysis</strong> — when off, nothing is sent to Anthropic in the background.</p>
+      <p>Lyli is a coaching feature, not a medical, mental-health, or financial professional; see our <a href="terms.html">Terms of Service</a> for the full disclaimer.</p>
+
+      <h2>3. Where your data lives (processors)</h2>
+      <table>
+        <thead><tr><th>Processor</th><th>Role</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Supabase</strong></td><td>Database, authentication and file storage (all app data)</td></tr>
+          <tr><td><strong>Anthropic</strong></td><td>AI analysis/chat as described above</td></tr>
+          <tr><td><strong>RevenueCat</strong></td><td>Subscription management and receipt validation</td></tr>
+          <tr><td><strong>PostHog</strong></td><td>Product analytics and crash reporting (see section 1)</td></tr>
+          <tr><td><strong>Expo (EAS)</strong></td><td>Push-notification delivery</td></tr>
+          <tr><td><strong>Apple / Google</strong></td><td>Sign-in (if you use Sign in with Apple / Google) and payments</td></tr>
+        </tbody>
+      </table>
+      <p>We do not sell your data, share it with advertisers, or use it for tracking across other companies' apps or websites.</p>
+
+      <h2>4. Leaderboards &amp; public profiles (your choice)</h2>
+      <p>By default your profile is private. If you opt in to leaderboards, your display name, Life Score and tier appear on global/regional boards. If you enable a public profile, other users can view your profile card; income figures appear <strong>only</strong> if you additionally enable "Show income". You can turn each of these off at any time.</p>
+
+      <h2>5. Your rights &amp; controls</h2>
+      <ul>
+        <li><strong>Export:</strong> Settings → Download my data gives you a complete machine-readable export of your data.</li>
+        <li><strong>Delete:</strong> Settings → Delete account permanently deletes your account and all associated data (database rows cascade; uploaded files are removed).</li>
+        <li><strong>AI opt-out:</strong> Settings → Lyli → AI analysis toggle.</li>
+        <li><strong>Notifications:</strong> disable any time in Settings or at the OS level.</li>
+        <li>EU/UK (GDPR) and California (CCPA/CPRA) residents may also exercise access, rectification, portability and deletion rights via the in-app tools above or by emailing <a href="mailto:support@lynal.app">support@lynal.app</a>. We do not "sell" or "share" personal information as defined by the CCPA.</li>
       </ul>
 
-      <h2>3. How we share information</h2>
-      <p>We do not sell your personal information. We may share it with:</p>
-      <ul>
-        <li>Service providers who help us operate the Service (cloud hosting, analytics, customer support, payment processing), bound by confidentiality obligations</li>
-        <li>Other users, only if you choose to use social features like Compete — and only the information you choose to share (such as your Life Score, streak, or tier) is visible to the friends or groups you connect with</li>
-        <li>Authorities or professional advisors where required by law, or to protect the rights, safety, and property of Lynal, our users, or others</li>
-        <li>A successor entity in connection with a merger, acquisition, or sale of assets</li>
-      </ul>
+      <h2>6. Retention</h2>
+      <p>Your data is retained while your account exists so the app can compute your history, scores and recaps. Deleting your account removes it. Ephemeral processing data at our AI processor is subject to Anthropic's retention terms for API traffic.</p>
 
-      <h2>4. AI processing</h2>
-      <p>Lyli uses the information you log in the app to generate personalized insights and coaching. Lyli's responses are generated automatically and may occasionally be inaccurate or incomplete. We may use de-identified, aggregated data to improve our models and the Service; we do not use your personal check-in data to train models in a way that could identify you to other users.</p>
+      <h2>7. Security</h2>
+      <p>Data is encrypted in transit (TLS) and at rest by our hosting provider. Your session token is stored in your device's secure keychain. Access to your rows is enforced server-side with row-level security; other users can never read your journals, check-ins or logs.</p>
 
-      <h2>5. Data retention</h2>
-      <p>We retain your information for as long as your account is active or as needed to provide the Service. You can request deletion of your account and associated data at any time by contacting us at <a href="mailto:support@lynal.app">support@lynal.app</a>.</p>
+      <h2>8. Age</h2>
+      <p>Lynal is rated 12+. It is not directed at children under 13, and we do not knowingly collect data from them; if you believe a child under 13 has an account, contact us and we will delete it.</p>
 
-      <h2>6. Your rights and choices</h2>
-      <p>Depending on where you live, you may have rights to access, correct, delete, or export your personal information, or to object to or restrict certain processing. To exercise these rights, contact us at <a href="mailto:support@lynal.app">support@lynal.app</a>. We will respond in accordance with applicable law.</p>
+      <h2>9. Changes</h2>
+      <p>We'll post any material changes to this page and update the effective date. Continued use after changes means you accept the updated policy.</p>
 
-      <h2>7. Data security</h2>
-      <p>We use administrative, technical, and physical safeguards designed to protect your information. However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.</p>
-
-      <h2>8. Children's privacy</h2>
-      <p>The Service is not directed to children under 13 (or the applicable minimum age in your jurisdiction), and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, contact us at <a href="mailto:support@lynal.app">support@lynal.app</a> so we can delete it.</p>
-
-      <h2>9. International users</h2>
-      <p>If you access the Service from outside the country where our servers are located, your information may be transferred to, stored, and processed in a country with different data protection laws than your own.</p>
-
-      <h2>10. Changes to this policy</h2>
-      <p>We may update this Privacy Policy from time to time. We will post the updated version on this page with a new "Last updated" date and, where required, provide additional notice.</p>
-
-      <h2>11. Contact us</h2>
-      <p>Questions about this Privacy Policy or how we handle your information? Contact us at <a href="mailto:support@lynal.app">support@lynal.app</a>.</p>
+      <h2>10. Contact</h2>
+      <p>Questions or requests about this policy or your data:<br>
+      <strong>Nile Productivity LLC</strong>, <a href="mailto:support@lynal.app">support@lynal.app</a>.</p>
     </div>
   </main>
 
@@ -188,9 +226,9 @@
         <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm text-t2r">
           <a href="privacy.html" class="nav-link text-t1 transition-colors hover:text-t1">Privacy</a>
           <a href="terms.html" class="nav-link transition-colors hover:text-t1">Terms</a>
-          <a href="mailto:support@lynal.app" class="nav-link transition-colors hover:text-t1">Support</a>
+          <a href="mailto:support@lynal.app" class="nav-link transition-colors hover:text-t1">support@lynal.app</a>
         </div>
-        <p class="text-sm text-t2r">© 2026 Lynal</p>
+        <p class="text-sm text-t2r">© 2026 Nile Productivity LLC</p>
       </div>
     </div>
   </footer>
