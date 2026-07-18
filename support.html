@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Lynal</title>
+  <meta name="description" content="Get help with Lynal — contact support, manage your account and subscription, and reach our team at support@lynal.app." />
+
+  <!-- ============ ICONS ============ -->
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <meta name="theme-color" content="#0e0d14" />
+
+  <!-- ============ FONTS ============ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- ============ TAILWIND ============ -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Outfit', 'system-ui', 'sans-serif'],
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            bg:    '#0e0d14', card: '#15141e', card2: '#1a1924', line: '#1e1c2a', ink: '#0a0910',
+            t1:    '#e8e8f0', t2: '#6a7a8a', t2r: '#8c97a6', t3: '#3a3a52', tb: '#aeb4c6',
+            brand: { DEFAULT:'#3a7ab8', bright:'#5aa6e6', deep:'#2a5d92' },
+            ment: '#9a7ac8', phys: '#3a7a4a', fin: '#c8b86a', soc: '#c85a7a',
+          },
+          boxShadow: {
+            glow: '0 0 0 1px rgba(58,122,184,.22), 0 6px 20px -6px rgba(58,122,184,.45)',
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    :root{ color-scheme: dark; --ease: cubic-bezier(.16,1,.3,1); }
+    html, body{ background:#0e0d14; overflow-x:clip; }
+    body{
+      background-image: radial-gradient(120% 90% at 50% -10%, #15131f 0%, #0e0d14 42%, #090810 100%);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+    .grain::before{
+      content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.028; mix-blend-mode:overlay;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size:200px 200px;
+    }
+    @media (min-resolution:2dppx){ .grain::before{ opacity:.02; } }
+    .eyebrow{ font-family:'Outfit',sans-serif; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:#6a7a8a; }
+    .glassborder{ position:relative; }
+    .glassborder::before{
+      content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; pointer-events:none;
+      background:linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.015) 45%, rgba(58,122,184,.16));
+      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude;
+    }
+    .surface{ background:#15141e; border:1px solid #1e1c2a; box-shadow:inset 0 1px 0 0 rgba(255,255,255,.04), 0 1px 0 0 rgba(0,0,0,.5); }
+    .rule{ height:1px; background:linear-gradient(90deg,transparent,rgba(58,122,184,.25),transparent); }
+    .nav-link{ position:relative; }
+    .nav-link::after{ content:""; position:absolute; left:0; bottom:-4px; height:1px; width:100%; background:linear-gradient(90deg,#2f6396,#5aa6e6); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease); }
+    .nav-link:hover::after{ transform:scaleX(1); }
+    .btn-primary{ transition:transform .25s cubic-bezier(.34,1.56,.64,1), box-shadow .25s ease; }
+    .btn-primary:hover{ transform:translateY(-1px) scale(1.02); box-shadow:0 8px 24px -8px rgba(58,122,184,.6); }
+    .btn-primary:active{ transform:translateY(0) scale(.985); transition-duration:.08s; }
+    .lift{ transition:transform .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease); }
+    .lift:hover{ transform:translateY(-2px); border-color:rgba(58,122,184,.35); box-shadow:0 12px 30px -12px rgba(0,0,0,.7); }
+    :focus-visible{ outline:none; box-shadow:0 0 0 2px #0e0d14, 0 0 0 4px rgba(90,166,230,.7); border-radius:inherit; }
+
+    .help h3{ font-family:'Outfit',sans-serif; font-weight:600; font-size:1.06rem; color:#e8e8f0; letter-spacing:-.01em; }
+    .help ul{ margin-top:.75rem; display:flex; flex-direction:column; gap:.55rem; }
+    .help li{ line-height:1.6; color:#8c97a6; font-size:.95rem; }
+    .help strong{ color:#cdd2de; font-weight:600; }
+    .help a{ color:#5aa6e6; text-decoration:underline; text-underline-offset:2px; text-decoration-color:rgba(58,122,184,.45); }
+    .help a:hover{ color:#fff; }
+
+    @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } .lift:hover{ transform:none; } }
+  </style>
+</head>
+
+<body class="grain font-sans text-t1 antialiased selection:bg-brand/40 selection:text-white">
+
+  <!-- ================= AMBIENT BACKGROUND ================= -->
+  <div class="pointer-events-none fixed inset-0 z-0">
+    <div class="absolute -top-32 left-1/2 h-[28rem] w-[52rem] -translate-x-1/2" style="background:radial-gradient(ellipse at center, rgba(58,122,184,.18), transparent 70%); filter:blur(95px); mix-blend-mode:screen;"></div>
+    <div class="absolute inset-0 opacity-[0.03]" style="background-image:linear-gradient(rgba(255,255,255,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.5) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 36%,transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 50% at 50% 0%,#000 36%,transparent 100%);"></div>
+    <div class="absolute inset-0" style="background:radial-gradient(130% 130% at 50% 32%, transparent 55%, rgba(8,7,14,.65) 100%); mix-blend-mode:multiply;"></div>
+    <div class="absolute inset-x-0 bottom-0 h-64" style="background:linear-gradient(0deg,#090810,transparent);"></div>
+  </div>
+
+  <!-- ================= NAV ================= -->
+  <header class="fixed inset-x-0 top-0 z-50 px-4 pt-4">
+    <nav class="glassborder mx-auto flex max-w-6xl items-center justify-between rounded-2xl bg-bg/70 px-4 py-3 backdrop-blur-xl sm:px-6">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Lynal home">
+        <img src="icon.png" alt="" class="h-9 w-9 drop-shadow-[0_2px_10px_rgba(90,90,200,.35)]" />
+        <span class="text-lg font-semibold tracking-tight font-display">Lynal</span>
+      </a>
+      <div class="hidden items-center gap-8 text-sm text-t2r md:flex">
+        <a href="index.html#how" class="nav-link transition-colors hover:text-t1">How it works</a>
+        <a href="index.html#features" class="nav-link transition-colors hover:text-t1">Features</a>
+        <a href="index.html#lyli" class="nav-link transition-colors hover:text-t1">Meet Lyli</a>
+      </div>
+      <a href="index.html#download" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">
+        Get the app
+      </a>
+    </nav>
+  </header>
+
+  <main class="relative z-10 mx-auto max-w-3xl px-4 pt-32 pb-24 sm:pt-40 sm:pb-32">
+    <a href="index.html" class="inline-flex items-center gap-1.5 text-sm text-t2r transition-colors hover:text-t1">← Back to Lynal</a>
+
+    <p class="eyebrow mt-8">Support</p>
+    <h1 class="mt-3 font-display font-semibold" style="font-size:clamp(2rem,4vw,2.75rem); letter-spacing:-.02em;">How can we help?</h1>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-tb">Questions, feedback, bug reports, or account help — the Lynal team reads every message. Reach us by email and we'll get back to you.</p>
+
+    <!-- ===== CONTACT CARD ===== -->
+    <div class="glassborder surface lift mt-8 rounded-2xl p-7 sm:p-8">
+      <p class="eyebrow">Contact</p>
+      <h2 class="mt-2 font-display text-2xl font-semibold text-t1" style="letter-spacing:-.01em;">Email our team</h2>
+      <p class="mt-2 text-t2r">The fastest way to reach us. We typically reply within <strong class="font-semibold text-tb">1–2 business days</strong>.</p>
+      <a href="mailto:support@lynal.app" class="btn-primary mt-5 inline-flex items-center gap-2 rounded-xl bg-t1 px-5 py-2.5 text-sm font-semibold text-bg font-display">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        support@lynal.app
+      </a>
+      <p class="mt-4 text-sm text-t2r">When you write in, it helps to include your account email, your device and OS version, and a short description of what happened.</p>
+    </div>
+
+    <!-- ===== QUICK HELP ===== -->
+    <h2 class="mt-14 font-display text-xl font-semibold text-t1" style="letter-spacing:-.01em;">Quick help</h2>
+    <div class="help mt-5 grid gap-4 sm:grid-cols-2">
+
+      <div class="surface lift rounded-2xl p-6">
+        <h3>Account &amp; your data</h3>
+        <ul>
+          <li><strong>Export your data:</strong> Settings → Download my data for a complete, machine-readable export.</li>
+          <li><strong>Delete your account:</strong> Settings → Delete account permanently removes your account and all associated data.</li>
+          <li>Trouble signing in? Email us and we'll help you recover access.</li>
+        </ul>
+      </div>
+
+      <div class="surface lift rounded-2xl p-6">
+        <h3>Subscriptions &amp; billing</h3>
+        <ul>
+          <li><strong>Manage or cancel:</strong> Settings → Subscription → Manage, or your Apple / Google account settings.</li>
+          <li><strong>Restore purchases:</strong> Settings → Subscription → Restore purchases.</li>
+          <li><strong>Refunds</strong> are handled by Apple or Google under their policies.</li>
+        </ul>
+      </div>
+
+      <div class="surface lift rounded-2xl p-6">
+        <h3>Lyli &amp; AI analysis</h3>
+        <ul>
+          <li><strong>Turn AI on or off:</strong> Settings → Lyli → AI analysis. When off, nothing is sent for background analysis.</li>
+          <li>Lyli is a coaching feature — not medical, mental-health, or financial advice. See our <a href="terms.html">Terms</a>.</li>
+        </ul>
+      </div>
+
+      <div class="surface lift rounded-2xl p-6">
+        <h3>Notifications &amp; privacy</h3>
+        <ul>
+          <li><strong>Notifications:</strong> adjust any time in Settings or at the OS level.</li>
+          <li><strong>Your privacy:</strong> what we collect and the controls you have are detailed in our <a href="privacy.html">Privacy Policy</a>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- ===== LEGAL LINKS ===== -->
+    <div class="surface mt-8 rounded-2xl p-6">
+      <p class="text-sm text-t2r">Looking for our policies?
+        <a href="privacy.html" class="text-brand-bright underline underline-offset-2 hover:text-white">Privacy Policy</a>
+        ·
+        <a href="terms.html" class="text-brand-bright underline underline-offset-2 hover:text-white">Terms of Service</a>
+      </p>
+      <p class="mt-2 text-sm text-t2r">Lynal is operated by <strong class="font-semibold text-tb">Nile Productivity LLC</strong> (Texas, USA).</p>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="relative z-10 px-4 py-12">
+    <div class="mx-auto max-w-6xl">
+      <div class="rule mb-12"></div>
+      <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+        <div class="flex items-center gap-2.5">
+          <img src="icon.png" alt="" class="h-8 w-8" />
+          <span class="font-display font-semibold text-t1">Lynal</span>
+          <span class="text-sm text-t2r">· Life Analytics</span>
+        </div>
+        <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-2 text-sm text-t2r">
+          <a href="privacy.html" class="nav-link transition-colors hover:text-t1">Privacy</a>
+          <a href="terms.html" class="nav-link transition-colors hover:text-t1">Terms</a>
+          <a href="support.html" class="nav-link text-t1 transition-colors hover:text-t1">Support</a>
+        </div>
+        <p class="text-sm text-t2r">© 2026 Nile Productivity LLC</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
