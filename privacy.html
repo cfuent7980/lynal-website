@@ -121,22 +121,24 @@
         <li>Journals and dream entries — free-form text you write.</li>
         <li>Workouts: exercises, sets, weights, duration, intensity, body stats (e.g. body weight and body-fat figures) you log.</li>
         <li>Goals and goal progress.</li>
-        <li>Onboarding answers: your focus pillar, energy level, routines, what you told us about feeling overwhelmed or about your social life, and why you downloaded Lynal.</li>
+        <li>Onboarding answers: your focus pillar, your energy and mental-state ratings, any notes you typed (for example about feeling overwhelmed, your goals or your social life), your routine, follow-through and workout-frequency answers, your chosen check-in time, and why you downloaded Lynal.</li>
         <li>Daily focus items and your weight goal.</li>
-        <li>Your conversations with Lyli (your messages and Lyli's replies), stored so the conversation can continue.</li>
+        <li>Your conversations with Lyli (your messages and Lyli's replies), stored so the conversation can continue and used to update Lyli's memory (below).</li>
         <li>Social interaction logs (who/what you note, quality ratings).</li>
         <li>Income figures and income goals <strong>you choose to enter</strong> (never pulled from any financial institution).</li>
         <li>Derived scores (your Life Score and pillar scores), streaks, league placement, badges and weekly recaps computed from the above.</li>
       </ul>
       <p>We do <strong>not</strong> connect to Apple Health or Google Fit. Any workout or body data in Lynal is only what you enter in the app yourself.</p>
 
-      <p><strong>Lyli's memory.</strong> To personalise its coaching, Lyli builds and keeps a written profile of you from your entries: observations, a running model of your patterns, working theories and open questions about you, monthly summaries, and a starting profile derived from your date of birth (using numerology and Sun-sign associations). This profile is stored with your account, is part of the context sent to Anthropic for every Lyli chat and recap (see section 2), and is deleted with your account.</p>
+      <p><strong>Lyli's memory.</strong> To personalise its coaching, Lyli builds and keeps a written profile of you from your entries: observations, a running model of your patterns, working theories and open questions about you, monthly summaries, and a starting profile derived from your date of birth (using numerology and Sun-sign associations). This profile is stored with your account, is included in what we send to Anthropic when Lyli chats with you or analyses your entries (see section 2), and is deleted with your account.</p>
 
       <p><strong>Friends (optional).</strong> If you add friends inside the app, we store the friend requests and friendships you create. This uses only accounts already on Lynal — Lynal does <strong>not</strong> read, upload, or scan your device's address book.</p>
 
       <p><strong>Photos.</strong> If you set a profile photo or add an image to a journal entry, the image you pick or take is uploaded to your storage area on our servers. We request camera/photo access only when you initiate this.</p>
 
       <p><strong>Push tokens &amp; device data.</strong> If you enable notifications, we store your Expo push token to deliver them. We do not collect advertising identifiers or precise location, and we do not use third-party advertising SDKs.</p>
+
+      <p><strong>Website visitors (lynal.app).</strong> Our website is hosted on GitHub Pages and delivered through Fastly. Like any web host, their servers record standard connection logs (your IP address, browser details and the pages requested) for security and operations, under GitHub's privacy statement. The site itself sets no cookies, runs no analytics, and loads no resources from third parties.</p>
 
       <p><strong>Product analytics &amp; diagnostics.</strong> We use <strong>PostHog</strong>, a first-party product analytics tool, to understand how the app is used and to find crashes. It records:</p>
       <ul>
@@ -146,7 +148,7 @@
         <li>A small number of named product events — for example completing onboarding, signing out, or starting/failing a purchase.</li>
         <li>Crash and error reports.</li>
       </ul>
-      <p>These events are linked to your account's user ID so we can tell one person's session from another's. <strong>We never send the content you create</strong> — journal and dream text, chat messages, mood notes and photos are excluded by design. We do not use this data for advertising, and we do not share it with data brokers or combine it with data from other companies' apps or websites. Signing out detaches your identity from future events; deleting your account removes your data as described in section 5.</p>
+      <p>These events are linked to your account's user ID so we can tell one person's session from another's. <strong>We never send the content you create</strong> — journal and dream text, chat messages, mood notes and photos are excluded by design. We do not use this data for advertising, and we do not share it with data brokers or combine it with data from other companies' apps or websites. Signing out detaches your identity from future events. Events already recorded at PostHog are not removed when you delete your account (see section 5).</p>
 
       <h2>2. How AI is involved (Anthropic)</h2>
       <p>Lynal's assistant ("Lyli") analyzes your entries (journals, dreams, check-ins, habits, workouts, goals, income trends) to produce insights, chat responses, weekly recaps and suggested workouts. To do this, relevant excerpts of your data, together with Lyli's stored profile of you (see "Lyli's memory" in section 1), are sent to <strong>Anthropic</strong> (Claude models) via API from our servers. Anthropic's commercial API terms provide that API data is <strong>not used to train their models</strong>. You can disable all background AI analysis at any time in <strong>Settings → Lyli → AI analysis</strong> — when off, nothing is sent to Anthropic in the background.</p>
@@ -174,7 +176,7 @@
 
       <h2>5. Your rights &amp; controls</h2>
       <ul>
-        <li><strong>Export:</strong> Settings → Download my data gives you a machine-readable export of your data.</li>
+        <li><strong>Export:</strong> Settings → Download my data gives you a machine-readable export of your data (uploaded photos are not included in the file).</li>
         <li><strong>Delete:</strong> Settings → Delete account deletes your account, your data in our database, and your uploaded files. Subscription and purchase records held by RevenueCat and product-analytics events held by PostHog are not removed by this step and are retained under those processors' terms.</li>
         <li><strong>AI opt-out:</strong> Settings → Lyli → AI analysis toggle.</li>
         <li><strong>Notifications:</strong> disable any time in Settings or at the OS level.</li>

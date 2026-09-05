@@ -2,4 +2,3 @@ Contact: mailto:support@lynal.app
 Expires: 2027-09-01T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://lynal.app/.well-known/security.txt
-Policy: https://lynal.app/privacy.html

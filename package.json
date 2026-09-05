@@ -1,19 +1,15 @@
 {
   "name": "lynalappwebsite",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "lynal.app marketing site (GitHub Pages). Run `npm run build:css` after editing classes in the HTML.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "tailwindcss -c tailwind.config.js -i src/input.css -o tailwind.css --minify"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cfuent7980/lynal-website.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/cfuent7980/lynal-website/issues"
