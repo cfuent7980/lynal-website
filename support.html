@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://lynal.app/support.html" />
   <title>Support — Lynal</title>
   <meta name="description" content="Get help with Lynal — contact support, manage your account and subscription, and reach our team at support@lynal.app." />
 
@@ -11,34 +14,11 @@
   <link rel="apple-touch-icon" href="icon.png" />
   <meta name="theme-color" content="#0e0d14" />
 
-  <!-- ============ FONTS ============ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- ============ FONTS (self-hosted, OFL) ============ -->
+  <link rel="stylesheet" href="fonts.css">
 
-  <!-- ============ TAILWIND ============ -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Outfit', 'system-ui', 'sans-serif'],
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-          },
-          colors: {
-            bg:    '#0e0d14', card: '#15141e', card2: '#1a1924', line: '#1e1c2a', ink: '#0a0910',
-            t1:    '#e8e8f0', t2: '#6a7a8a', t2r: '#8c97a6', t3: '#3a3a52', tb: '#aeb4c6',
-            brand: { DEFAULT:'#3a7ab8', bright:'#5aa6e6', deep:'#2a5d92' },
-            ment: '#9a7ac8', phys: '#3a7a4a', fin: '#c8b86a', soc: '#c85a7a',
-          },
-          boxShadow: {
-            glow: '0 0 0 1px rgba(58,122,184,.22), 0 6px 20px -6px rgba(58,122,184,.45)',
-          },
-        },
-      },
-    }
-  </script>
+  <!-- ============ TAILWIND (static build: npm run build:css) ============ -->
+  <link rel="stylesheet" href="tailwind.css">
 
   <style>
     :root{ color-scheme: dark; --ease: cubic-bezier(.16,1,.3,1); }
@@ -54,7 +34,7 @@
       background-size:200px 200px;
     }
     @media (min-resolution:2dppx){ .grain::before{ opacity:.02; } }
-    .eyebrow{ font-family:'Outfit',sans-serif; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:#6a7a8a; }
+    .eyebrow{ font-family:'Outfit',sans-serif; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:#8c97a6; }
     .glassborder{ position:relative; }
     .glassborder::before{
       content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; pointer-events:none;
@@ -106,9 +86,7 @@
         <a href="index.html#features" class="nav-link transition-colors hover:text-t1">Features</a>
         <a href="index.html#lyli" class="nav-link transition-colors hover:text-t1">Meet Lyli</a>
       </div>
-      <a href="index.html#download" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">
-        Get the app
-      </a>
+      <a href="mailto:support@lynal.app?subject=Notify%20me%20when%20Lynal%20launches" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">Notify me</a>
     </nav>
   </header>
 
@@ -138,9 +116,9 @@
       <div class="surface lift rounded-2xl p-6">
         <h3>Account &amp; your data</h3>
         <ul>
-          <li><strong>Export your data:</strong> Settings → Download my data for a complete, machine-readable export.</li>
-          <li><strong>Delete your account:</strong> Settings → Delete account permanently removes your account and all associated data.</li>
-          <li>Trouble signing in? Email us and we'll help you recover access.</li>
+          <li><strong>Export your data:</strong> Settings → Download my data for a machine-readable export.</li>
+          <li><strong>Delete your account:</strong> Settings → Delete account deletes your account, your data in our database, and your uploaded files (see the Privacy Policy for what our processors retain).</li>
+          <li>Trouble signing in? Use <strong>Forgot password</strong> in the app or Sign in with Apple. Support will never change your email address or credentials on request alone; recovery is always confirmed through the email address on your account.</li>
         </ul>
       </div>
 
@@ -201,5 +179,6 @@
       </div>
     </div>
   </footer>
+  <script src="site.js" defer></script>
 </body>
 </html>

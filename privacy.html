@@ -3,42 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <link rel="canonical" href="https://lynal.app/privacy.html" />
   <title>Privacy Policy — Lynal</title>
   <meta name="description" content="Lynal Privacy Policy — what data the app handles, where it goes, and the controls you have." />
-  <meta name="robots" content="noindex, follow" />
 
   <!-- ============ ICONS ============ -->
   <link rel="icon" type="image/png" href="icon.png" />
   <link rel="apple-touch-icon" href="icon.png" />
   <meta name="theme-color" content="#0e0d14" />
 
-  <!-- ============ FONTS ============ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <!-- ============ FONTS (self-hosted, OFL) ============ -->
+  <link rel="stylesheet" href="fonts.css">
 
-  <!-- ============ TAILWIND ============ -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Outfit', 'system-ui', 'sans-serif'],
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-          },
-          colors: {
-            bg:    '#0e0d14', card: '#15141e', card2: '#1a1924', line: '#1e1c2a', ink: '#0a0910',
-            t1:    '#e8e8f0', t2: '#6a7a8a', t2r: '#8c97a6', t3: '#3a3a52', tb: '#aeb4c6',
-            brand: { DEFAULT:'#3a7ab8', bright:'#5aa6e6', deep:'#2a5d92' },
-          },
-          boxShadow: {
-            glow: '0 0 0 1px rgba(58,122,184,.22), 0 6px 20px -6px rgba(58,122,184,.45)',
-          },
-        },
-      },
-    }
-  </script>
+  <!-- ============ TAILWIND (static build: npm run build:css) ============ -->
+  <link rel="stylesheet" href="tailwind.css">
 
   <style>
     :root{ color-scheme: dark; --ease: cubic-bezier(.16,1,.3,1); }
@@ -54,7 +34,7 @@
       background-size:200px 200px;
     }
     @media (min-resolution:2dppx){ .grain::before{ opacity:.02; } }
-    .eyebrow{ font-family:'Outfit',sans-serif; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:#6a7a8a; }
+    .eyebrow{ font-family:'Outfit',sans-serif; font-size:.72rem; font-weight:600; text-transform:uppercase; letter-spacing:.18em; color:#8c97a6; }
     .glassborder{ position:relative; }
     .glassborder::before{
       content:""; position:absolute; inset:0; border-radius:inherit; padding:1px; pointer-events:none;
@@ -112,9 +92,7 @@
         <a href="index.html#features" class="nav-link transition-colors hover:text-t1">Features</a>
         <a href="index.html#lyli" class="nav-link transition-colors hover:text-t1">Meet Lyli</a>
       </div>
-      <a href="index.html#download" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">
-        Get the app
-      </a>
+      <a href="mailto:support@lynal.app?subject=Notify%20me%20when%20Lynal%20launches" class="btn-primary cursor-pointer rounded-xl bg-t1 px-4 py-2 text-sm font-semibold text-bg font-display">Notify me</a>
     </nav>
   </header>
 
@@ -124,7 +102,7 @@
     <p class="eyebrow mt-8">Legal</p>
     <h1 class="mt-3 font-display font-semibold" style="font-size:clamp(2rem,4vw,2.75rem); letter-spacing:-.02em;">Privacy Policy</h1>
     <div class="mt-4 space-y-0.5 text-sm text-t2r">
-      <p><strong class="font-semibold text-t1">Effective date:</strong> August 6, 2026</p>
+      <p><strong class="font-semibold text-t1">Effective date:</strong> September 5, 2026</p>
       <p><strong class="font-semibold text-t1">Publisher:</strong> Nile Productivity LLC (Texas, USA)</p>
       <p><strong class="font-semibold text-t1">Contact:</strong> <a href="mailto:support@lynal.app" class="text-brand-bright underline underline-offset-2 hover:text-white">support@lynal.app</a></p>
     </div>
@@ -143,11 +121,16 @@
         <li>Journals and dream entries — free-form text you write.</li>
         <li>Workouts: exercises, sets, weights, duration, intensity, body stats (e.g. body weight and body-fat figures) you log.</li>
         <li>Goals and goal progress.</li>
+        <li>Onboarding answers: your focus pillar, energy level, routines, what you told us about feeling overwhelmed or about your social life, and why you downloaded Lynal.</li>
+        <li>Daily focus items and your weight goal.</li>
+        <li>Your conversations with Lyli (your messages and Lyli's replies), stored so the conversation can continue.</li>
         <li>Social interaction logs (who/what you note, quality ratings).</li>
         <li>Income figures and income goals <strong>you choose to enter</strong> (never pulled from any financial institution).</li>
         <li>Derived scores (your Life Score and pillar scores), streaks, league placement, badges and weekly recaps computed from the above.</li>
       </ul>
       <p>We do <strong>not</strong> connect to Apple Health or Google Fit. Any workout or body data in Lynal is only what you enter in the app yourself.</p>
+
+      <p><strong>Lyli's memory.</strong> To personalise its coaching, Lyli builds and keeps a written profile of you from your entries: observations, a running model of your patterns, working theories and open questions about you, monthly summaries, and a starting profile derived from your date of birth (using numerology and Sun-sign associations). This profile is stored with your account, is part of the context sent to Anthropic for every Lyli chat and recap (see section 2), and is deleted with your account.</p>
 
       <p><strong>Friends (optional).</strong> If you add friends inside the app, we store the friend requests and friendships you create. This uses only accounts already on Lynal — Lynal does <strong>not</strong> read, upload, or scan your device's address book.</p>
 
@@ -166,7 +149,7 @@
       <p>These events are linked to your account's user ID so we can tell one person's session from another's. <strong>We never send the content you create</strong> — journal and dream text, chat messages, mood notes and photos are excluded by design. We do not use this data for advertising, and we do not share it with data brokers or combine it with data from other companies' apps or websites. Signing out detaches your identity from future events; deleting your account removes your data as described in section 5.</p>
 
       <h2>2. How AI is involved (Anthropic)</h2>
-      <p>Lynal's assistant ("Lyli") analyzes your entries (journals, dreams, check-ins, habits, workouts, goals, income trends) to produce insights, chat responses, weekly recaps and suggested workouts. To do this, relevant excerpts of your data are sent to <strong>Anthropic</strong> (Claude models) via API from our servers. Anthropic's commercial API terms provide that API data is <strong>not used to train their models</strong>. You can disable all background AI analysis at any time in <strong>Settings → Lyli → AI analysis</strong> — when off, nothing is sent to Anthropic in the background.</p>
+      <p>Lynal's assistant ("Lyli") analyzes your entries (journals, dreams, check-ins, habits, workouts, goals, income trends) to produce insights, chat responses, weekly recaps and suggested workouts. To do this, relevant excerpts of your data, together with Lyli's stored profile of you (see "Lyli's memory" in section 1), are sent to <strong>Anthropic</strong> (Claude models) via API from our servers. Anthropic's commercial API terms provide that API data is <strong>not used to train their models</strong>. You can disable all background AI analysis at any time in <strong>Settings → Lyli → AI analysis</strong> — when off, nothing is sent to Anthropic in the background.</p>
       <p>Lyli is a coaching feature, not a medical, mental-health, or financial professional; see our <a href="terms.html">Terms of Service</a> for the full disclaimer.</p>
 
       <h2>3. Where your data lives (processors)</h2>
@@ -191,21 +174,22 @@
 
       <h2>5. Your rights &amp; controls</h2>
       <ul>
-        <li><strong>Export:</strong> Settings → Download my data gives you a complete machine-readable export of your data.</li>
-        <li><strong>Delete:</strong> Settings → Delete account permanently deletes your account and all associated data (database rows cascade; uploaded files are removed).</li>
+        <li><strong>Export:</strong> Settings → Download my data gives you a machine-readable export of your data.</li>
+        <li><strong>Delete:</strong> Settings → Delete account deletes your account, your data in our database, and your uploaded files. Subscription and purchase records held by RevenueCat and product-analytics events held by PostHog are not removed by this step and are retained under those processors' terms.</li>
         <li><strong>AI opt-out:</strong> Settings → Lyli → AI analysis toggle.</li>
         <li><strong>Notifications:</strong> disable any time in Settings or at the OS level.</li>
-        <li>EU/UK (GDPR) and California (CCPA/CPRA) residents may also exercise access, rectification, portability and deletion rights via the in-app tools above or by emailing <a href="mailto:support@lynal.app">support@lynal.app</a>. We do not "sell" or "share" personal information as defined by the CCPA.</li>
+        <li><strong>Verification:</strong> to protect your account, we act on emailed requests only when they come from the email address on your account and are confirmed through a one-time link or code sent to that address; where possible, use the in-app Export and Delete tools.</li>
+        <li>EU/UK (GDPR) and California (CCPA/CPRA) residents may also exercise their rights of access, rectification, erasure, restriction, objection (including to analytics) and portability, and may withdraw any consent they have given (without affecting processing carried out before withdrawal), via the in-app tools above or by emailing <a href="mailto:support@lynal.app">support@lynal.app</a>. EU/UK residents also have the right to lodge a complaint with their supervisory authority (in the UK, the ICO). We do not "sell" or "share" personal information as defined by the CCPA.</li>
       </ul>
 
       <h2>6. Retention</h2>
-      <p>Your data is retained while your account exists so the app can compute your history, scores and recaps. Deleting your account removes it. Ephemeral processing data at our AI processor is subject to Anthropic's retention terms for API traffic.</p>
+      <p>Your data is retained while your account exists so the app can compute your history, scores and recaps. Deleting your account removes it from our database and storage (see section 5 for what our processors retain). Ephemeral processing data at our AI processor is subject to Anthropic's retention terms for API traffic.</p>
 
       <h2>7. Security</h2>
       <p>Data is encrypted in transit (TLS) and at rest by our hosting provider. Your session token is stored in your device's secure keychain. Access to your rows is enforced server-side with row-level security; other users can never read your journals, check-ins or logs.</p>
 
       <h2>8. Age</h2>
-      <p>Lynal is rated 12+ on the App Store, and you must be at least 16 to create an account (enforced at sign-up). The app is not directed at children, and we do not knowingly collect data from anyone under 16; if you believe someone under 16 has an account, contact us and we will delete it.</p>
+      <p>Whatever age rating appears on Lynal's App Store listing, you must be at least 16 to create an account (enforced at sign-up). The app is not directed at children, and we do not knowingly collect data from anyone under 16; if you believe someone under 16 has an account, contact us and we will delete it.</p>
 
       <h2>9. Changes</h2>
       <p>We'll post any material changes to this page and update the effective date. Continued use after changes means you accept the updated policy.</p>
@@ -235,5 +219,6 @@
       </div>
     </div>
   </footer>
+  <script src="site.js" defer></script>
 </body>
 </html>
